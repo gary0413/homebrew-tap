@@ -31,6 +31,11 @@ cask "saykey" do
       system_command "/usr/bin/curl",
                      args: ["-L", "--fail", "--progress-bar", "-o", dest, file_url]
     end
+
+    # The app is self-signed (open source, runs fully on-device) but not Apple
+    # notarized, so strip the download quarantine to avoid a Gatekeeper block.
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/SayKey.app"]
   end
 
   uninstall quit: "app.saykey.SayKey"

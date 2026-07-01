@@ -4,7 +4,7 @@ cask "saykey" do
 
   url "https://github.com/gary0413/SayKey/releases/download/v#{version}/SayKey-v#{version}-macos.zip"
   name "SayKey"
-  desc "Local push-to-talk voice input for macOS, built for Chinese-English code-switching"
+  desc "Push-to-talk voice input built for Chinese-English code-switching"
   homepage "https://github.com/gary0413/SayKey"
 
   depends_on formula: ["whisper-cpp", "opencc"]

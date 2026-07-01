@@ -8,7 +8,7 @@ cask "saykey" do
   homepage "https://github.com/gary0413/SayKey"
 
   depends_on formula: ["whisper-cpp", "opencc"]
-  depends_on macos: ">= :ventura"
+  depends_on macos: :ventura
 
   app "SayKey.app"
 

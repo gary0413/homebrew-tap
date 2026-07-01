@@ -37,7 +37,7 @@ cask "saykey" do
                      args: ["-L", "--fail", "--progress-bar", "-o", tmp, file_url]
       got_sha = Digest::SHA256.file(tmp).hexdigest
       if got_sha != want_sha
-        FileUtils.rm_f(tmp)
+        File.delete(tmp)
         odie "SayKey model #{name} failed checksum (expected #{want_sha}, got #{got_sha})"
       end
       FileUtils.mv(tmp, dest)

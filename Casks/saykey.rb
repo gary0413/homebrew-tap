@@ -20,12 +20,13 @@ cask "saykey" do
     FileUtils.mkdir_p(models)
     {
       "ggml-large-v3-turbo-q5_0.bin" =>
-        "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q5_0.bin",
-      "ggml-silero-v6.2.0.bin" =>
-        "https://huggingface.co/ggml-org/whisper-vad/resolve/main/ggml-silero-v6.2.0.bin",
+                                        "https://huggingface.co/ggerganov/whisper.cpp/resolve/main/ggml-large-v3-turbo-q5_0.bin",
+      "ggml-silero-v6.2.0.bin"       =>
+                                        "https://huggingface.co/ggml-org/whisper-vad/resolve/main/ggml-silero-v6.2.0.bin",
     }.each do |name, file_url|
       dest = File.join(models, name)
       next if File.exist?(dest)
+
       opoo "Downloading SayKey model #{name} (first run only)…"
       system_command "/usr/bin/curl",
                      args: ["-L", "--fail", "--progress-bar", "-o", dest, file_url]

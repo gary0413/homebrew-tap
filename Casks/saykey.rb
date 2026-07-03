@@ -1,6 +1,6 @@
 cask "saykey" do
-  version "0.2.0"
-  sha256 "7d459753a3940c2415fa00b571c49dcd8c9ce616e274fdea9b0be19edff52c2c"
+  version "0.2.1"
+  sha256 "fbd1721b505a936be1f296978467ea86f7ba1ce20b2ab6807b692e7711b572bd"
 
   url "https://github.com/gary0413/SayKey/releases/download/v#{version}/SayKey-v#{version}-macos.zip"
   name "SayKey"

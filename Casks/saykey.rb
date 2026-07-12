@@ -52,10 +52,15 @@ cask "saykey" do
   uninstall quit: "app.saykey.SayKey"
 
   caveats <<~EOS
-    SayKey runs entirely on-device. On first launch, grant Microphone (and,
-    only if you enable auto-paste, Accessibility) in System Settings.
+    SayKey runs entirely on-device — install downloads the ~570MB speech model
+    to ~/.saykey/models (one-time; this is why the first install takes a while).
 
-    Start/stop dictation with Control-Option-Space. Config: ~/.saykey/config.json
+    On first launch, grant Microphone (and, only if you enable auto-paste,
+    Accessibility) in System Settings.
+
+    Start/stop dictation with Control-Option-Space. This combo is also macOS's
+    "next input source" shortcut; SayKey takes it over while running. To pick a
+    different hotkey, use the in-app Settings window (menu bar > 設定…).
 
     Models are stored in ~/.saykey/models and are NOT removed on uninstall.
   EOS

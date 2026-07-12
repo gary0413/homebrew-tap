@@ -1,6 +1,6 @@
 cask "saykey" do
-  version "0.4.0"
-  sha256 "84dd61e93058579bf30294d3a9e0dda102f62da16ec0d8c290edc4fd6d92a6aa"
+  version "0.4.1"
+  sha256 "78fcb676da3aa4a108310d3bf1d47ce8644aecde4bf0c9093e76eb36389d786b"
 
   url "https://github.com/gary0413/SayKey/releases/download/v#{version}/SayKey-v#{version}-macos.zip"
   name "SayKey"
@@ -58,9 +58,9 @@ cask "saykey" do
     On first launch, grant Microphone (and, only if you enable auto-paste,
     Accessibility) in System Settings.
 
-    Start/stop dictation with Control-Option-Space. This combo is also macOS's
-    "next input source" shortcut; SayKey takes it over while running. To pick a
-    different hotkey, use the in-app Settings window (menu bar > 設定…).
+    Start/stop dictation with Option-S (new installs). Upgrades keep whatever
+    hotkey you already had. To change it, use the in-app Settings window
+    (menu bar > 設定…).
 
     Models are stored in ~/.saykey/models and are NOT removed on uninstall.
   EOS
